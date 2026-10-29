@@ -20,21 +20,28 @@
 
 ## 🎥 Video Pitch & Walkthrough Demo
 
+https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4
+
 <p align="center">
-  <a href="https://github.com/hg5594176-source/MCP/blob/main/demo-video.mp4">
-    <img src="demo-preview.gif" alt="Agent Safety Gate 53-Second Voiced Video Walkthrough" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+  <video src="https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4" controls="controls" width="100%">
+    <a href="https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4">
+      <b>▶️ Click here to open and watch the full 53-second demo video (website/public/demo-video.mp4)</b>
+    </a>
+  </video>
+</p>
+
+<p align="center">
+  <a href="https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4">
+    <img src="https://img.shields.io/badge/▶️%20Play%20Full%20Voiced%20Video-website%2Fpublic%2Fdemo--video.mp4-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Play Video">
   </a>
-  <br><br>
-  <a href="https://github.com/hg5594176-source/MCP/blob/main/demo-video.mp4">
-    <img src="https://img.shields.io/badge/▶️%20Watch%20Full%20Demo-demo--video.mp4-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo">
-  </a>
-  <a href="https://raw.githubusercontent.com/hg5594176-source/MCP/main/demo-video.mp4">
-    <img src="https://img.shields.io/badge/⬇️%20Download-HD%20MP4%20(8.2MB)-blue?style=for-the-badge&logo=quicktime&logoColor=white" alt="Download Video">
+  &nbsp;
+  <a href="https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4">
+    <img src="https://img.shields.io/badge/⬇️%20Direct%20Download-MP4%20(53s%20%7C%208.2MB)-blue?style=for-the-badge&logo=quicktime&logoColor=white" alt="Download MP4">
   </a>
 </p>
 
-> 🎬 **Full Walkthrough & Pitch:** [**Watch `demo-video.mp4` on GitHub**](https://github.com/hg5594176-source/MCP/blob/main/demo-video.mp4)  
-> *Narrated with Kokoro neural voiceover (`am_adam`) across all 8 chapters:*
+> 🎬 **Direct File Link:** [**`website/public/demo-video.mp4`**](website/public/demo-video.mp4) *(or view directly on GitHub: [**github.com/.../website/public/demo-video.mp4**](https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4))*  
+> *Full 53.4-second walkthrough with neural voiceover (`am_adam`) across all 8 chapters:*
 
 ```
 0:00 - 0:07 ── Hero: Root access & prompt injection vulnerabilities
