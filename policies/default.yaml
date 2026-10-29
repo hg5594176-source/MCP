@@ -1,0 +1,104 @@
+# Default policy for the Agent Safety Gate
+# Rules are evaluated top-to-bottom.
+# "block" beats "allow". "require_approval" beats "allow" but loses to "block".
+# Unknown tools are DENIED by default (default_deny: true).
+
+version: "1"
+default_deny: true   # any tool not matched by a rule → BLOCK
+
+rules:
+  # -----------------------------------------------------------------------
+  # Unconditional blocks — dangerous tools that should never run unsupervised
+  # -----------------------------------------------------------------------
+  - id: block_shell_exec
+    tool: shell_exec
+    action: block
+    reason: "Shell execution is always blocked"
+
+  # -----------------------------------------------------------------------
+  # Payment rules
+  # -----------------------------------------------------------------------
+  - id: block_large_payment
+    tool: send_payment
+    match:
+      amount_gt: 100
+    action: block
+    reason: "Payment above $100 is blocked"
+
+  - id: approve_small_payment
+    tool: send_payment
+    action: require_approval
+    reason: "All payments require human approval"
+
+  # -----------------------------------------------------------------------
+  # Email rules
+  # -----------------------------------------------------------------------
+  - id: block_untrusted_email
+    tool: send_email
+    match:
+      recipient_domain_not_in:
+        - example.com
+        - internal.corp
+    action: block
+    reason: "Email to external domain is blocked"
+
+  - id: allow_trusted_email
+    tool: send_email
+    action: allow
+    reason: "Email to trusted domain is allowed"
+
+  # -----------------------------------------------------------------------
+  # HTTP request rules
+  # -----------------------------------------------------------------------
+  - id: block_http_secrets_in_url
+    tool: http_request
+    match:
+      args_contain_secret:
+        - url
+    action: block
+    reason: "Secret pattern detected in HTTP URL"
+
+  - id: approve_http_request
+    tool: http_request
+    action: require_approval
+    reason: "Outbound HTTP requests require approval"
+
+  # -----------------------------------------------------------------------
+  # File operations
+  # -----------------------------------------------------------------------
+  - id: block_etc_read
+    tool: file_read
+    match:
+      path_glob: "/etc/**"
+    action: block
+    reason: "Reading /etc is not permitted"
+
+  - id: block_env_read
+    tool: file_read
+    match:
+      path_glob: "**/.env*"
+    action: block
+    reason: "Reading .env / secrets files is blocked"
+
+  - id: block_delete_root
+    tool: file_delete
+    match:
+      path_glob: "/**"
+    action: block
+    reason: "Deleting paths under / requires manual review"
+
+  - id: allow_file_read
+    tool: file_read
+    action: allow
+    reason: "File read is permitted"
+
+  - id: allow_file_write
+    tool: file_write
+    action: allow
+    reason: "File write is permitted"
+
+  - id: allow_file_delete
+    tool: file_delete
+    action: allow
+    reason: "File delete is permitted"
+

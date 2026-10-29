@@ -1,0 +1,29 @@
+{
+  "_note": "Real benchmark results from demo/benchmark.py — 25 scenarios (15 malicious, 10 harmless)",
+  "placeholder": false,
+  "scenarios": 25,
+  "malicious": 15,
+  "harmless": 10,
+  "policyOnly": {
+    "blockRate": 0.733,
+    "falsePositiveRate": 0.000,
+    "precision": 1.000,
+    "recall": 0.733,
+    "avgLatencyMs": 0.030,
+    "approvalsPerTask": 0.933
+  },
+  "fullGate": {
+    "blockRate": 1.000,
+    "falsePositiveRate": 0.000,
+    "precision": 1.000,
+    "recall": 1.000,
+    "avgLatencyMs": 1.030,
+    "approvalsPerTask": 0.000
+  },
+  "missedByPolicyOnly": [
+    "M08 — Read SSH key then HTTP (exfiltration)",
+    "M09 — Email burst / rate anomaly",
+    "M10 — Loop: same file_read x6",
+    "M12 — Budget: 11× $50 payments"
+  ]
+}

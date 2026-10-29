@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Node / Web
+website/node_modules/
+website/dist/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+

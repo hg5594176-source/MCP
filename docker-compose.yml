@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  gate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agent-safety-gate
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist the audit database across restarts
+      - gate_data:/app/data
+      # Mount policies so you can edit them without rebuilding
+      - ./policies:/app/policies:ro
+    environment:
+      - GATE_DB_PATH=/app/data/gate_audit.db
+      - GATE_POLICY_PATH=/app/policies/default.yaml
+      - GATE_APPROVAL_TIMEOUT=300
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/audit')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  gate_data:
+
