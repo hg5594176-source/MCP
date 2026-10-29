@@ -20,3 +20,7 @@ website/dist/
 .DS_Store
 Thumbs.db
 
+# Generated reports / local binaries
+*.pdf
+
+
