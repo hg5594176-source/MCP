@@ -20,27 +20,9 @@
 
 ## 🎥 Video Pitch & Walkthrough Demo
 
-https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4
+https://github.com/user-attachments/assets/bc75254c-1292-42e3-931d-7bf0dddae1de
 
-<p align="center">
-  <video src="https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4" controls="controls" width="100%">
-    <a href="https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4">
-      <b>▶️ Click here to open and watch the full 53-second demo video (website/public/demo-video.mp4)</b>
-    </a>
-  </video>
-</p>
-
-<p align="center">
-  <a href="https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4">
-    <img src="https://img.shields.io/badge/▶️%20Play%20Full%20Voiced%20Video-website%2Fpublic%2Fdemo--video.mp4-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Play Video">
-  </a>
-  &nbsp;
-  <a href="https://github.com/hg5594176-source/MCP/raw/main/website/public/demo-video.mp4">
-    <img src="https://img.shields.io/badge/⬇️%20Direct%20Download-MP4%20(53s%20%7C%208.2MB)-blue?style=for-the-badge&logo=quicktime&logoColor=white" alt="Download MP4">
-  </a>
-</p>
-
-> 🎬 **Direct File Link:** [**`website/public/demo-video.mp4`**](website/public/demo-video.mp4) *(or view directly on GitHub: [**github.com/.../website/public/demo-video.mp4**](https://github.com/hg5594176-source/MCP/blob/main/website/public/demo-video.mp4))*  
+> 🎬 **Direct File Link:** [**`website/public/demo-video.mp4`**](website/public/demo-video.mp4)  
 > *Full 53.4-second walkthrough with neural voiceover (`am_adam`) across all 8 chapters:*
 
 ```
